@@ -103,7 +103,6 @@ The project includes a research phase with:
 ![Room Selection Module](./screenshots/room_selection_step2.png)
 ![Room Selection Module](./screenshots/room_selection_step3.png)
 ![Admin Dashboard](./screenshots/admin_dashboard.png)
-![Admin Dashboard](./screenshots/admin_dashboard (2).png)
 
 ---
 
