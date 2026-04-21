@@ -1,7 +1,7 @@
 
 # 📄 README
 
-```md
+
 # DormEase – Data-Driven Dormitory Management System
 
 DormEase is a full-stack web application designed to automate student dormitory settlement processes, with a strong focus on data collection, analysis, and process optimization.
@@ -43,7 +43,6 @@ The system was designed with data generation and analysis in mind:
 ---
 
 ## 🧠 Data Pipeline (Conceptual)
-```
 
 User Actions (Frontend)
 ↓
@@ -56,8 +55,6 @@ Background Processing (Celery)
 Storage (Database + MinIO)
 ↓
 Potential Analytics Layer
-
-````
 
 ---
 
@@ -144,4 +141,3 @@ This project demonstrates:
 - Aigerim Omirzak
 - Zharkynai Zhakuda
 
-```
