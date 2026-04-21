@@ -1,0 +1,66 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Request Status</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+    }
+    .email-container {
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #2c3e50;
+    }
+    .message {
+      font-size: 16px;
+      color: #34495e;
+      line-height: 1.5;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      text-align: center;
+      color: #95a5a6;
+    }
+    .aitu-logo {
+      margin-top: 25px;
+      width: 120px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h1>Your request status has been updated.</h1>
+    </div>
+
+    <div class="message">
+      {{ message }}
+    </div>
+
+    <div class="footer">
+      If you have any questions, please contact the dormitory administration.<br>
+      This message was sent automatically!<br>
+      <img src="https://du.astanait.edu.kz/assets/logo.jpg" alt="AITU Logo" class="aitu-logo">
+    </div>
+  </div>
+</body>
+</html>

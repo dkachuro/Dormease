@@ -1,0 +1,58 @@
+/* Legend Component Styles */
+.legend-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  border-radius: 6px;
+  padding: 0 8px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+.available {
+  background-color: #DCFCE7;
+}
+
+
+.partial {
+  background-color: #FEF9C3;
+}
+
+
+.occupied {
+  background-color: #FEE2E2;
+}
+
+.available .legend-text {
+  color: #043014;
+}
+
+.partial .legend-text {
+  color: #625c1a;
+}
+
+.occupied .legend-text {
+  color: #681111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legend-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .legend-item {
+    font-size: 11px;
+    padding: 0 6px;
+  }
+}

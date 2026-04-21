@@ -1,0 +1,39 @@
+.with-sidebar-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 100px;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  width: calc(100% - 100px);
+}
+
+/* When sidebar is open */
+.sidebar.open ~ .main-content {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .sidebar.open ~ .main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar.open ~ .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

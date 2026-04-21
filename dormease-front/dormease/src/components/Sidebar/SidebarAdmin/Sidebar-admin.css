@@ -1,0 +1,335 @@
+:root {
+  /* Light Mode Colors */
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --danger: #ef233c;
+  --danger-hover: #d90429;
+  --success: #2b9348;
+  --text-main: #2b2d42;
+  --text-secondary: #4a5568;
+  --border: #e2e8f0;
+  --bg-card: #ffffff;
+  --bg-page: #f8fafc;
+  
+  /* Dark Mode Colors (will override light mode when .dark class is active) */
+  --primary-dark: #4895ef;
+  --primary-hover-dark: #3a7bc8;
+  --danger-dark: #f72585;
+  --danger-hover-dark: #b5179e;
+  --success-dark: #4cc9f0;
+  --text-main-dark: #f8f9fa;
+  --text-secondary-dark: #adb5bd;
+  --border-dark: #495057;
+  --bg-card-dark: #212529;
+  --bg-page-dark: #121416;
+  
+  /* Shared Variables */
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.3s ease;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --primary: var(--primary-dark);
+  --primary-hover: var(--primary-hover-dark);
+  --danger: var(--danger-dark);
+  --danger-hover: var(--danger-hover-dark);
+  --success: var(--success-dark);
+  --text-main: var(--text-main-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border: var(--border-dark);
+  --bg-card: var(--bg-card-dark);
+  --bg-page: var(--bg-page-dark);
+}
+
+/* Sidebar Component */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Profile Section */
+.sidebar-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4rem 1.5rem 1.5rem; /* Increased top padding */
+  border-bottom: 1px solid var(--border);
+  margin-top: 1.5rem; /* Additional space above profile */
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.profile-role {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Navigation Menu */
+.sidebar-nav {
+  flex: 1;
+  padding: 0.5rem 0;
+  overflow-y: auto;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0.25rem 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: rgba(var(--primary), 0.1);
+  color: var(--primary);
+}
+
+.nav-link.active {
+  background-color: #ebf4ff;
+  color: var(--primary);
+  border-left: 8px solid var(--primary);
+}
+
+.nav-icon {
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.nav-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Sidebar Footer Actions */
+.sidebar-actions {
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+
+.action-button:hover {
+  background-color: rgba(var(--primary), 0.1);
+  color: var(--primary);
+}
+
+
+.action-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  width: 24px;
+  text-align: center;
+}
+
+
+.theme-toggle, .logout-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  border-radius: var(--radius);
+}
+
+.theme-toggle:hover, .logout-button:hover {
+  background-color: rgba(67, 97, 238, 0.1);
+  color: var(--primary);
+}
+
+.theme-icon, .logout-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+
+/* Burger Menu Toggle - Enhanced */
+.burger-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--bg-card);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.burger-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-hover);
+}
+
+.burger-line {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 4px 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+/* Open state animations */
+.burger-button.open {
+  border-color: var(--primary);
+}
+
+.burger-button.open:hover {
+  border-color: var(--primary);
+}
+
+.burger-button.open .burger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: var(--primary);
+}
+
+.burger-button.open .burger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burger-button.open .burger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color:var(--primary);
+}
+
+.burger-button:active {
+  animation: pulse 0.3s ease;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+/* Responsive Behavior */
+@media (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+  
+  .sidebar:not(.open) {
+    left: -300px;
+  }
+  
+  .burger-button {
+    display: flex; /* Always visible */
+  }
+}
+
+/* Add these updates to your existing CSS */
+
+/* Default mobile styles */
+.sidebar {
+  left: -300px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+  
+  /* This ensures the toggle still works on desktop */
+  .sidebar:not(.open) {
+    left: -300px;
+  }
+  
+  .burger-button {
+    display: flex; /* Keep visible on desktop */
+  }
+  
+  .sidebar-overlay {
+    display: none; /* No overlay needed on desktop */
+  }
+}

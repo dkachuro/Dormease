@@ -1,0 +1,254 @@
+/* Building Card Styles */
+.building-card {
+  border: 1px solid #E2E8F0;
+  border-radius: 16px; /* Increased border radius */
+  padding: 28px 24px; /* Increased padding */
+  text-align: justify;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  transition: all 0.3s ease;
+  width: 550px; /* Fixed width but responsive through media queries */
+  margin: 0 auto;
+}
+
+.building-card:hover {
+  transform: translateY(-4px); /* More pronounced hover effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.building-icon-container {
+  margin: 0 auto 20px; /* Centered with more bottom margin */
+  width: 400px; /* Fixed container size */
+  height: 400px; /* Square container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8FAFC; /* Light background for icon */
+  border-radius: 12px; /* Rounded corners for icon container */
+  padding: 12px; /* Internal padding */
+}
+
+.building-icon {
+  height: 100%; /* Icon size */
+  width: auto;
+  max-width: 100%; /* Ensures icon stays within container */
+  object-fit: contain;
+}
+
+.building-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Slightly larger gap */
+}
+
+.stat-item-buildings, .stat-item-address, .stat-item-floors {
+  font-size: 18px; /* Larger font size */
+  color: #334155;
+  margin: 0;
+  font-weight: 500;
+}
+
+
+
+/* Floor Dropdown Styles */
+.floor-dropdown-container {
+  position: relative;
+  margin: 8px 0;
+  width: 120px; /* Narrower width to match building stats */
+}
+
+.floor-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 10px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #334155;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.floor-dropdown-toggle:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.dropdown-arrow {
+  margin-left: 8px;
+  font-size: 10px;
+  color: #64748b;
+}
+
+.floor-dropdown-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floor-dropdown-menu.down {
+  top: 100%;
+  margin-top: 4px;
+}
+
+.floor-dropdown-menu.up {
+  bottom: 100%;
+  margin-bottom: 4px;
+}
+
+.floor-dropdown-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #334155;
+  transition: background-color 0.2s ease;
+}
+
+.floor-dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.floor-dropdown-item:not(:last-child) {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .floor-dropdown-container {
+    width: 100px;
+  }
+  
+  .floor-dropdown-toggle {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+  
+  .floor-dropdown-item {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floor-dropdown-container {
+    width: 90px;
+  }
+  
+  .floor-dropdown-toggle {
+    font-size: 12px;
+  }
+}
+
+.available-stat-container {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Push content to the right */
+  background-color: #DCFCE7;
+  gap: 6px;
+  height: 28px; /* Slightly taller */
+  width: 120px;
+  border-radius: 10px;
+  padding: 0 8px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: auto; /* This pushes the container to the right */
+}
+
+.available-stat {
+  font-size: 15px;
+  color: #043014;
+  font-weight: 500;
+  margin: 0; /* Removed top margin since we're aligning vertically */
+  line-height: 1; /* Ensures text doesn't have extra space */
+}
+
+.parent-container {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%; 
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .building-card {
+    width: 240px;
+    padding: 24px 20px;
+  }
+  
+  .building-icon-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .building-icon {
+    height: 70px;
+  }
+  
+  .stat-item, .available-stat {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .building-card {
+    width: 200px;
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+  
+  .building-icon-container {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 16px;
+  }
+  
+  .building-icon {
+    height: 60px;
+  }
+  
+  .stat-item, .available-stat {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .building-card {
+    width: 100%; /* Full width on very small screens */
+    max-width: 260px; /* But not too wide */
+    padding: 18px 14px;
+  }
+  
+  .building-icon-container {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .building-icon {
+    height: 50px;
+  }
+  
+  .stat-item, .available-stat {
+    font-size: 14px;
+  }
+}

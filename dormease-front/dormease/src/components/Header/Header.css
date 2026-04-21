@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+
+.logo {
+  font-family: 'Noto Sans Tai Tham', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 2px;
+  letter-spacing: 0px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: 'Noto Color Emoji', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.login-button {
+  background: #0F172A;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow:
+    0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  font-family: 'Noto Color Emoji', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu-toggle span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #0F172A;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .header-center, .header-right {
+    display: none;
+    width: 100%;
+  }
+  
+  .header-center.active, .header-right.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .header-center {
+    order: 3;
+    margin-top: 1rem;
+  }
+  
+  .header-right {
+    order: 4;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

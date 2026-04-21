@@ -1,0 +1,185 @@
+/* StudentTable.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+  }
+  
+  .student-table-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #E5E7EB;
+    color: #374151;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #D1D5DB;
+  }
+  
+  .filter-buttons button.active {
+    background-color: #3f51b5;
+    color: white;
+  }
+  
+  .search-wrapper {
+    position: relative;
+    width: 300px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+  }
+  
+  .search-icon-button {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .search-icon {
+    color: #777;
+  }
+  
+  .student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-table th {
+    background-color: #3f51b5;
+    color: white;
+    padding: 12px 15px;
+    font-weight: 500;
+  }
+  
+  .student-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .student-table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .status-current {
+    color: #166534;
+    background-color: #DCFCE7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .status-moved-out {
+    color: #991B1B;
+    background-color: #FEE2E2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+.page-title-student {
+  font-size: clamp(24px, 4vw, 32px);
+  margin: 0px 0 20px 0px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+  @media (max-width: 768px) {
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  /* ÐžÐ±ÐµÑ€Ñ‚ÐºÐ° Ð²Ð¾ÐºÑ€ÑƒÐ³ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Ð´Ð»Ñ Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ ÑÐºÑ€Ð¾Ð»Ð»Ð° */
+  .student-table-container {
+    overflow-x: auto;
+  }
+
+  .student-table {
+    min-width: 700px; /* Ñ„Ð¸ÐºÑ Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð° Ð½Ðµ ÑÐ¶Ð¸Ð¼Ð°Ð»Ð°ÑÑŒ */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+}
+
+  .filter-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 8px 30px 8px 12px;
+  }
+}

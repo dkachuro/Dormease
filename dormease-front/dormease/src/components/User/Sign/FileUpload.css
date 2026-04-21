@@ -1,0 +1,176 @@
+/* File Upload Container */
+
+
+.file-upload-container h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* File input */
+.file-input {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.file-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Sign button */
+.sign-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--primary);
+  color: var(--bg-card);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* QR Section */
+.qr-section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.qr-section img {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.qr-section a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.qr-section a:hover {
+  text-decoration: underline;
+}
+
+/* CMS textarea */
+.cms-section {
+  margin-top: 1.5rem;
+}
+
+.cms-textarea {
+  width: 100%;
+  min-height: 160px;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-family: monospace;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Status Message */
+.status-message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(67, 97, 238, 0.05);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  color: var(--text-main);
+}
+
+/* Debug Log */
+.debug-log {
+  margin-top: 1.5rem;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+
+.debug-log summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+
+.upload-area {
+  border: 2px dashed #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-area:hover {
+  background-color: #f0f0f0;
+}
+
+.file-input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.upload-instruction {
+  color: #888;
+}
+
+.file-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.file-name {
+  font-weight: 500;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: red;
+  cursor: pointer;
+}

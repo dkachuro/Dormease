@@ -1,0 +1,541 @@
+.room-selection-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ÐšÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð¾Ð² */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+}
+
+/* Ð›ÐµÐ²Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð¾Ð² */
+.filters-left {
+  display: flex;
+  width: 350px;
+  gap: 15px;
+  align-items: center;
+}
+
+/* ÐŸÑ€Ð°Ð²Ð°Ñ Ñ‡Ð°ÑÑ‚ÑŒ Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð¾Ð² */
+.filters-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+/* ÐšÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ Ð¿Ñ€Ð¾Ð³Ñ€ÐµÑÑ-Ð±Ð°Ñ€Ð° */
+.progress-container {
+  width: 100%;
+  padding: 0 10px;
+    cursor: pointer;
+}
+
+/* ÐšÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ ÐºÐ°Ñ€Ñ‚Ð¾Ñ‡ÐµÐº */
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Ð”Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÑ‚Ð¾ Ð² Ð²Ð°Ñˆ Ñ„Ð°Ð¹Ð» ÑÑ‚Ð¸Ð»ÐµÐ¹ (RoomSelectionPage.css) */
+
+.confirmation-step {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.confirmation-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.confirmation-image {
+  display: flex;
+    align-items: center;
+  justify-content: center;
+}
+.confirmation-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.confirmation-text {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+ 
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .confirmation-text {
+    grid-template-columns: 1fr;
+  }
+  
+  .confirmation-text p {
+    padding: 0.6rem;
+  }
+}
+
+.confirmation-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.confirmation-info p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 18px;
+}
+
+.confirmation-step h2 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 0rem;
+}
+
+.confirmation-step h3 {
+  font-size: 1.2rem;
+  color: #303641;
+  font-weight: 500;
+  margin: 0 0 0.8rem 0;
+}
+
+.roommates-list {
+  margin-top: 0rem;
+}
+
+.roommates-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roommates-list li {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  border-left: 3px solid #4299e1;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.conf-back-button, .confirm-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.conf-back-button {
+  background-color: #f1f5f9;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.conf-back-button:hover {
+  background-color: #e2e8f0;
+}
+
+.confirm-button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+}
+
+.confirm-button:hover {
+  background-color: #3182ce;
+}
+
+.success-message {
+  color: #38a169;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f0fff4;
+  border-radius: 6px;
+}
+
+.error-message {
+  color: #dc3545;;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fff0f0;
+  border-radius: 6px;
+}
+
+
+
+/* ÐÐ´Ð°Ð¿Ñ‚Ð¸Ð²Ð½Ñ‹Ðµ ÑÑ‚Ð¸Ð»Ð¸ */
+@media (max-width: 768px) {
+  .confirmation-step {
+    width: 95%;
+    padding: 1.2rem;
+  }
+  
+  .confirmation-content {
+    flex-direction: column;
+  }
+  
+  .confirmation-image img {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .confirmation-actions {
+    flex-direction: column;
+  }
+  
+  .conf-back-button, .confirm-button {
+    width: 100%;
+  }
+  
+  .conf-back-button {
+    order: 2;
+    margin-top: 0.5rem;
+  }
+  
+  .confirm-button {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-step {
+    padding: 1rem;
+  }
+  
+  .confirmation-step h2 {
+    font-size: 1.3rem;
+  }
+  
+  .confirmation-info p {
+    font-size: 0.9rem;
+  }
+}
+
+.room-image-container {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.room-image-container img {
+  width: 100%;
+  height: 100%; 
+   object-fit: contain; 
+}
+
+
+
+.room-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures full image is visible */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .room-image-container {
+    width: 80%; /* Slightly larger on tablets */
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .room-image-container {
+    width: 60%; /* Medium size on larger tablets */
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .room-image-container {
+    width: 50%; /* Original size on desktop */
+  }
+}
+
+/* Optional hover effect */
+.room-image-container:hover img {
+  transform: scale(1.03); /* Subtle zoom on hover */
+}
+
+.room-info {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.room-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.room-info strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.conf-back-button {
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.conf-back-button:hover {
+  background-color: #f7fafc;
+  border-color: #a0aec0;
+}
+
+.confirm-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #16A34A;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+  background-color: #0e7032;
+}
+
+/* Ð¡Ñ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ ÑÐ¿Ð¸ÑÐºÐ° ÑÐ¾ÑÐµÐ´ÐµÐ¹ Ð¿Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚Ðµ */
+/* .roommates-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.roommates-list li {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+} */
+
+.confirmed-message {
+  
+  padding: 2rem;
+}
+
+.room-info-simple {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.room-image-confirmed {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.room-image-confirmed img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.status-pending {
+  color: #d69e2e;
+  font-weight: 600;
+}
+
+/* Ð Ð°Ð·Ð´ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð°Ñ Ð»Ð¸Ð½Ð¸Ñ ÐºÐ°Ðº Ð½Ð° Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ð¸ */
+.divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 1.5rem 0;
+}
+
+/* ÐÐ´Ð°Ð¿Ñ‚Ð¸Ð²Ð½Ñ‹Ðµ ÑÑ‚Ð¸Ð»Ð¸ */
+@media (max-width: 1024px) {
+  .room-selection-page {
+    padding: 15px;
+    gap: 25px;
+  }
+
+  
+  .filters-container {
+    gap: 15px;
+    padding: 12px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .filters-left, .filters-right {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .cards-container, .room-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-selection-page {
+    padding: 12px;
+    gap: 20px;
+  }
+  
+  .filters-container {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .filters-left, .filters-right {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .progress-container {
+    padding: 0;
+  }
+}
+.already-in-room-message {
+  text-align: center;
+  padding: 4rem;
+  background: #fef9f2;
+  border: 1px solid #ffd580;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 5rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.already-in-room-message h2 {
+  font-size: 2rem;
+  color: #d97706;
+}
+
+.already-in-room-message p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.building-card, .room-type-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.building-card:hover, .room-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.not-approved-message {
+  text-align: center;
+  padding: 3rem;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.not-approved-message h2 {
+  font-size: 1.8rem;
+  color: #e53e3e;
+  margin-bottom: 1rem;
+}
+
+.not-approved-message p {
+  font-size: 1.1rem;
+  color: #718096;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .not-approved-message {
+    padding: 2rem;
+    margin: 1rem auto;
+  }
+  
+  .not-approved-message h2 {
+    font-size: 1.5rem;
+  }
+  
+  .not-approved-message p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-approved-message {
+    padding: 1.5rem;
+  }
+  
+  .not-approved-message h2 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,113 @@
+.process-section {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #f9f9f9;
+  }
+  
+  .process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .process-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .process-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .process-subtitle {
+    color: #666;
+  }
+  
+  .process-grid {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  @media (min-width: 768px) {
+    .process-grid {
+      grid-template-columns: repeat(2, 320.5px);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .process-grid {
+      grid-template-columns: repeat(4, 320.5px);
+    }
+  }
+  
+  .process-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 24px;
+    text-align: center;
+    /* width: 100%; */
+    height: 242px;
+    max-width: 320px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+                0 1px 2px -1px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .process-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+                0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  .icon-bg {
+    margin-bottom: 1rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    background-color: rgba(151, 161, 178, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-bg svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  
+  
+  .icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    color: #20262e;
+  }
+  
+  
+  .step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  
+  .step-description {
+    color: #6b7280;
+    margin-bottom: auto;
+  }
+  
+  .step-number-process {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #000;
+  }

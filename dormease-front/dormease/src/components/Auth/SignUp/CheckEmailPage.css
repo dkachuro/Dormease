@@ -1,0 +1,58 @@
+.verify-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f7, #ffffff);
+  padding: 20px;
+}
+
+.verify-card {
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.verify-card h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.message {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.login-button {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.login-button:hover {
+  background-color: #125ea4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

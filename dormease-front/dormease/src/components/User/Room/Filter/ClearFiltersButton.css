@@ -1,0 +1,49 @@
+/* Clear Filters Button */
+.clear-filters-btn {
+  width: 107px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: all 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.clear-filters-btn:active {
+  background: #F1F5F9;
+  transform: translateY(1px);
+}
+
+.clear-filters-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .clear-filters-btn {
+    width: 100px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clear-filters-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}

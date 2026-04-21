@@ -1,0 +1,75 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Response to request</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 40px 0;
+    }
+    .email-container {
+      background-color: #ffffff;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+      color: #2c3e50;
+    }
+    .subject-line {
+      text-align: center;
+      font-size: 16px;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+    }
+    .message {
+      font-size: 16px;
+      color: #2c3e50;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      padding: 0 10px;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      text-align: center;
+      color: #95a5a6;
+    }
+    .aitu-logo {
+      margin-top: 20px;
+      width: 120px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h1>Response to your request</h1>
+    </div>
+    <div class="subject-line">
+      {{ subject }}
+    </div>
+
+    <div class="message">
+      {{ message }}
+    </div>
+
+    <div class="footer">
+      If you have any further questions, you can contact us via the Support page.<br>
+      This email was sent automatically.<br>
+      <img src="https://du.astanait.edu.kz/assets/logo.jpg" alt="AITU Logo" class="aitu-logo">
+    </div>
+  </div>
+</body>
+</html>

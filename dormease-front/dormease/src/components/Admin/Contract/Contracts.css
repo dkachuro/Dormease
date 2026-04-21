@@ -1,0 +1,38 @@
+.view-button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.pdf-viewer {
+  margin-top: 12px;
+  /* border: 1px solid #ccc; */
+  border-radius: 6px;
+  overflow: hidden;
+}
+.contract-iframe {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.iframe-actions {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.close-iframe-btn {
+  background-color: #ef4444;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+}

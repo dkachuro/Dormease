@@ -1,0 +1,109 @@
+/* Step Progress Styles */
+.step-progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  z-index: 1;
+}
+
+.step-item.active .step-number {
+  background-color: #0F172A;
+  color: white;
+}
+
+.step-item.completed .step-number {
+  background-color: #16A34A;
+  color: white;
+}
+
+.step-label {
+  color: #64748B;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.step-item.active .step-label {
+  color: #0F172A;
+  font-weight: 600;
+}
+
+.step-item.completed .step-label {
+  color: #16A34A;
+}
+
+.step-connector {
+  position: absolute;
+  top: 16px;
+  left: calc(50% + 16px);
+  right: calc(-50% + 16px);
+  height: 2px;
+  background-color: #E2E8F0;
+  z-index: 0;
+}
+
+.step-item.completed .step-connector {
+  background-color: #16A34A;
+}
+
+.step-item[style*="cursor: default"] {
+  opacity: 0.7;
+}
+
+.step-item[style*="cursor: default"]:hover {
+  transform: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .step-label {
+    font-size: 12px;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-progress-container {
+    padding: 10px 0;
+  }
+  
+  .step-label {
+    font-size: 10px;
+  }
+  
+  .step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}

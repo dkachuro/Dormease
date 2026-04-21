@@ -1,0 +1,355 @@
+/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background: white;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+  /* body {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  background-attachment: fixed;
+} */
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 50px 24px 24px 24px; */
+    background: rgb(255, 255, 255);
+    min-height: auto;
+    overflow: hidden;
+    padding: 85px 24px 0px 24px;
+    
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    gap: 24px;
+    z-index: 5;
+    padding: 0 1rem;
+    /* border: 1px solid red; */
+    margin-bottom: 0;
+  padding-bottom: 0;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  }
+  
+  
+  /* Text Section */
+  .hero-text {
+    flex: 1 1 50%;
+    max-width: 600px;
+    min-width: 340px;
+  }
+  
+  .hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #111827;
+    position: relative;
+  }
+  
+  .hero-text h1 .highlight {
+    position: relative;
+    color: #000;
+  }
+  
+  .hero-text h1 .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(232, 240, 255, 0.8);
+    z-index: -1;
+    border-radius: 4px;
+  }
+  
+  .hero-text p {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: #4B5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 36rem;
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .get-started-btn,
+  .learn-more-btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .get-started-btn {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .get-started-btn::after {
+    content: '→';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .get-started-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .get-started-btn:hover::after {
+    transform: translateX(4px);
+  }
+  
+  .learn-more-btn {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: rgba(232, 240, 255, 0.5);
+  }
+  
+  /* Image Section */
+  .hero-image-container {
+    flex: 1 1 50%;
+    min-width: 340px;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    height: auto;
+  }
+  
+  .image-wrapper {
+    width: 90%;
+    height: 90%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+  
+  .image-wrapper:hover .hero-image {
+    transform: scale(1.03);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(0,0,0,0.15), transparent 70%);
+  }
+  
+  /* Badges */
+  .badge {
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    z-index: 2;
+  }
+  
+  .top-right {
+    top: -16px;
+    right: -16px;
+    background-color: #DBEAFE;
+    color: #2563EB;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .bottom-left {
+    bottom: 50px;
+    left: -50px;
+    background-color: #D1FAE5;
+    color: #059669;
+    animation: float 3.5s ease-in-out infinite reverse;
+  }
+  
+  .bottom-right {
+    bottom: 20px;
+    right: 20px;
+    background-color: #e8f0ff;
+    color: #333;
+  }
+  
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  
+  /* Decorations */
+  .decoration {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .circle1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(239, 246, 255, 0.7);
+    bottom: -50px;
+    left: -50px;
+  }
+  
+  .circle2 {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(236, 253, 245, 0.6);
+    top: -40px;
+    right: -40px;
+  }
+  
+  .hero::before,
+  .hero::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 33.333%;
+    z-index: 1;
+  }
+  
+  .hero::before {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, rgba(239, 246, 255, 1), transparent);
+  }
+  
+  .hero::after {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(239, 246, 255, 1), transparent);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .buttons-container {
+      justify-content: center;
+    }
+  
+    .hero-text,
+    .hero-image-container {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .hero {
+      padding: 60px 16px;
+    }
+  
+    .buttons-container {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .get-started-btn,
+    .learn-more-btn {
+      width: 100%;
+    }
+  
+    .bottom-right {
+      display: none;
+    }
+  
+    .badge {
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+  .circle1, .circle2 {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 40px 12px;
+    min-height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .buttons-container {
+    gap: 12px;
+  }
+
+  .get-started-btn,
+  .learn-more-btn {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,896 @@
+:root {
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --secondary: #3a0ca3;
+  --danger: #ef233c;
+  --danger-hover: #d90429;
+  --success: #2b9348;
+  --text-main: #2b2d42;
+  --text-secondary: #4a5568;
+  --border: #e2e8f0;
+  --bg-card: #ffffff;
+  --bg-page: #f8fafc;
+  --radius: 12px;
+  --gradient-blue: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+}
+
+/* Dark Mode Variables */
+.dark {
+  --primary: #4895ef;
+  --primary-hover: #3a7bc8;
+  --danger: #f72585;
+  --danger-hover: #b5179e;
+  --success: #4cc9f0;
+  --text-main: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --border: #495057;
+  --bg-card: #212529;
+  --bg-page: #121416;
+}
+
+/* Main Container */
+body {
+  transition: margin-left 0.3s ease;
+  background-color: var(--bg-page);
+  min-height: 100vh;
+}
+
+.settings-container {
+  max-width: 100%;
+  /* width: calc(100% - 100px); */
+  margin: 0;
+  padding: 1rem;
+  color: var(--text-main);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .settings-container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin-left: 80px;
+  }
+  
+  .settings-container {
+    width: calc(100% - 80px);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0;
+  }
+  
+  .settings-container {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.settings-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .settings-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.settings-title {
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: 750;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .settings-title {
+    font-size: 2rem;
+  }
+}
+
+.edit-button {
+  background-color: var(--primary);
+  color: var(--bg-card);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+.edit-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 640px) {
+  .edit-button {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Delete Photo Button */
+.photo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.change-photo-btn,
+.delete-photo-btn {
+  border: none;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.change-photo-btn {
+  background-color: rgba(67, 97, 238, 0.1);
+  color: var(--primary);
+}
+
+.change-photo-btn:hover {
+  background-color: rgba(67, 97, 238, 0.2);
+}
+
+.delete-photo-btn {
+  background-color: rgba(239, 35, 60, 0.1);
+  color: var(--danger);
+}
+
+.delete-photo-btn:hover {
+  background-color: rgba(239, 35, 60, 0.2);
+}
+
+@media (min-width: 480px) {
+  .photo-actions {
+    flex-direction: row;
+  }
+  
+  .change-photo-btn,
+  .delete-photo-btn {
+    width: auto;
+    flex: 1;
+  }
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    margin-bottom: 2rem;
+  }
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile-section {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem;
+  }
+}
+
+.profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .profile-picture-container {
+    width: auto;
+    min-width: 180px;
+  }
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #9bc6fc;
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 768px) {
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.profile-info {
+  flex: 1;
+  text-align: left;
+  width: 100%;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile-name {
+    font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  }
+}
+
+.profile-role {
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile-role {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .profile-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.detail-value {
+  color: var(--text-main);
+  text-align: left;
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .detail-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .detail-label {
+    margin-bottom: 0.25rem;
+    white-space: normal;
+  }
+}
+
+.status-active {
+  color: var(--success);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Settings Form */
+.settings-form {
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.settings-form.editing-mode .form-input:not(:disabled) {
+  border-color: #a0c4ff;
+  background-color: var(--bg-page);
+}
+
+.settings-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .settings-card {
+    margin-bottom: 2rem;
+  }
+}
+
+.settings-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .settings-section {
+    padding: 2rem;
+  }
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin: 0 0 0.25rem 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.25rem;
+  }
+}
+
+.section-description {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  margin: 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section-description {
+    font-size: 0.875rem;
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .form-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .form-label {
+    font-size: 0.875rem;
+  }
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: var(--text-main);
+  background-color: var(--bg-card);
+  transition: all 0.2s;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .form-input {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.form-input:disabled {
+  background-color: var(--bg-page);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.input-error {
+  border-color: var(--danger);
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(248, 180, 180, 0.5);
+}
+
+.error-message {
+  color: var(--danger-hover);
+  font-size: 0.6875rem;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .error-message {
+    font-size: 0.75rem;
+  }
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .checkbox-group {
+    margin-top: 1rem;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  transition: all 0.2s ease;
+}
+
+/* Base styling for checkmark in non-editing mode */
+.settings-form:not(.editing-mode) .checkmark {
+  background-color: #f1f5f9;
+  border-color: #226dc9;
+}
+
+/* Show checked state clearly even in non-editing mode */
+.settings-form:not(.editing-mode) .checkbox-input:checked ~ .checkmark {
+  background-color: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.settings-form:not(.editing-mode) .checkbox-input:checked ~ .checkmark:after {
+  display: block;
+  border-color: #64748b; /* Darker checkmark for visibility */
+}
+
+/* Dark mode adjustments */
+.dark .settings-form:not(.editing-mode) .checkmark {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark .settings-form:not(.editing-mode) .checkbox-input:checked ~ .checkmark {
+  background-color: #4a5568;
+  border-color: #718096;
+}
+
+.dark .settings-form:not(.editing-mode) .checkbox-input:checked ~ .checkmark:after {
+  border-color: #e2e8f0;
+}
+
+/* Interactive states in editing mode */
+.settings-form.editing-mode .checkbox-container:hover .checkbox-input ~ .checkmark {
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+.settings-form.editing-mode .checkbox-container .checkbox-input:checked ~ .checkmark {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Checkmark styling */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--bg-card);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.settings-form.editing-mode .checkbox-container .checkbox-input:checked ~ .checkmark:after {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+  .checkmark:after {
+    left: 7px;
+    top: 3px;
+  }
+}
+
+/* Label styling */
+.checkbox-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+/* Slightly muted label in non-editing mode */
+.settings-form:not(.editing-mode) .checkbox-label {
+  color: var(--text-secondary);
+}
+
+/* Pointer cursor only in editing mode */
+.settings-form:not(.editing-mode) .checkbox-container {
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .checkbox-label {
+    font-size: 0.875rem;
+  }
+}
+
+.checkbox-description {
+  color: var(--text-secondary);
+  font-size: 0.6875rem;
+  margin-left: 2rem;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .checkbox-description {
+    font-size: 0.75rem;
+  }
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--bg-page);
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .form-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.cancel-button:hover {
+  background-color: rgba(108, 117, 125, 0.1);
+}
+
+.submit-button {
+  background-color: var(--primary);
+  color: var(--bg-card);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  background-color: #a0c4ff;
+  cursor: not-allowed;
+}
+
+@media (min-width: 640px) {
+  .cancel-button,
+  .submit-button {
+    width: auto;
+  }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.sidebar-collapsed body {
+  margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-collapsed body {
+    margin-left: 0;
+  }
+}
+
+/* About Me Section */
+.about-me-section {
+  background-color: rgba(67, 97, 238, 0.05);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: left;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.about-me-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.about-me-text {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+/* Dark Mode Styles */
+.dark .about-me-section {
+  background-color: rgba(72, 149, 239, 0.05);
+  border-color: var(--border);
+}
+
+.dark .about-me-title {
+  color: var(--text-main);
+}
+
+.dark .about-me-text {
+  color: var(--text-secondary);
+}
+
+.dark .settings-container,
+.dark .profile-card,
+.dark .settings-card {
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.dark .settings-title,
+.dark .profile-name,
+.dark .section-title,
+.dark .detail-value {
+  color: var(--text-main);
+  text-align: left;
+}
+
+.dark .profile-role,
+.dark .section-description,
+.dark .form-label,
+.dark .checkbox-label {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.dark .form-input,
+.dark .checkbox-container .checkmark {
+  background-color: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+.dark .form-input:disabled {
+  background-color: rgba(73, 80, 87, 0.5);
+  color: var(--text-secondary);
+}
+
+.dark .form-actions {
+  background-color: var(--bg-page);
+  border-color: var(--border);
+  text-align: left;
+}
+
+.dark .cancel-button {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border);
+  text-align: left;
+}
+
+.dark .cancel-button:hover {
+  background-color: rgba(108, 117, 125, 0.1);
+}
+
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .settings-section {
+    padding: 1rem;
+  }
+  
+  .form-actions {
+    padding: 0.75rem;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    padding: 0.75rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    margin-left: 0 !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .settings-container {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .profile-card,
+  .settings-card {
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  
+  .edit-button,
+  .form-actions {
+    display: none !important;
+  }
+}
+
