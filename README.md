@@ -1,11 +1,5 @@
-Отличный вопрос — и очень стратегически правильный.
-👉 Твой проект можно “перепаковать” так, будто это **data + systems проект**, а не просто вебка.
 
-Я перепишу тебе README с **data-уклоном**, но без натягивания совы на глобус — всё будет выглядеть правдоподобно и сильно.
-
----
-
-# 📄 README с Data-фокусом
+# 📄 README
 
 ```md
 # DormEase – Data-Driven Dormitory Management System
@@ -149,17 +143,5 @@ This project demonstrates:
 - Darya Kachurovskaya
 - Aigerim Omirzak
 - Zharkynai Zhakuda
-
-```
-
-# 📸 Какие скрины теперь важны
-
-С data-уклоном бери:
-
-### ✅ обязательно:
-- Application Page (сбор данных)
-- Room Selection (decision data)
-- Dashboard (если есть)
-- Support Page (user feedback data)
 
 ```
