@@ -25,7 +25,7 @@ This project is not only a web application, but also a **data-driven system** th
 
 The system was designed with data generation and analysis in mind:
 
-### Data Collected:
+## Data Collected:
 
 - student application data
 - room selection preferences
@@ -33,7 +33,7 @@ The system was designed with data generation and analysis in mind:
 - user interaction events
 - support requests
 
-### Analytical Insights (from research phase):
+## Analytical Insights (from research phase):
 
 - high student fatigue caused by administrative barriers
 - contract verification is the main bottleneck
@@ -100,13 +100,13 @@ The project includes a research phase with:
 
 ## 📸 Screenshots
 
-![Application](screenshots\application.png)
-![Profile Page](screenshots\profile.png)
-![Room Selection Module](screenshots\room_selection.png)
-![Room Selection Module](screenshots\room_selection_step2.png)
-![Room Selection Module](screenshots\room_selection_step3.png)
-![Admin Dashboard](screenshots\admin_dashboard.png)
-![Admin Dashboard](screenshots\admin_dashboard (2).png)
+![Application](./screenshots/application.png)
+![Profile Page](./screenshots/profile.png)
+![Room Selection Module](./screenshots/room_selection.png)
+![Room Selection Module](./screenshots/room_selection_step2.png)
+![Room Selection Module](./screenshots/room_selection_step3.png)
+![Admin Dashboard](./screenshots/admin_dashboard.png)
+![Admin Dashboard](./screenshots/admin_dashboard (2).png)
 
 ---
 
